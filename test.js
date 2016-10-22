@@ -11,8 +11,7 @@ function createErrorMessage(e) {
 try {
     let perfectGame = ['X','X','X','X','X','X','X','X','X','X','X','X'];
     let game = new Bowling(perfectGame);
-
-    assert.equal(game, 300, 'Perfect game not calculated properly');
+    assert.equal(game.finalScore(), 300, 'Perfect game not calculated properly');
 
 } catch(e) {
   createErrorMessage(e);
@@ -20,7 +19,7 @@ try {
 
 try {
     let nineMissGame = ['9','-','9','-','9','-','9','-','9','-','9','-','9','-','9','-','9','-','9','-'];
-    let game = new Bowling(nineMissGame);
+    let game = new Bowling(nineMissGame).finalScore();
 
     assert.equal(game, 90, 'Nine-miss game not calculated properly');
 
@@ -30,7 +29,7 @@ try {
 
 try {
   let fiveSpareGame = ['5','/','5','/','5','/','5','/','5','/','5','/','5','/','5','/','5','/','5','/','5'];
-  let game = new Bowling(fiveSpareGame);
+  let game = new Bowling(fiveSpareGame).finalScore();
 
   assert.equal(game, 150, 'Five-spare game not calculated properly');
 } catch(e) {
@@ -39,10 +38,12 @@ try {
 
 try {
   let testGame = ['X','7','/','9','-','X','-','8','8','/','-','6','X','X','X','8','1'];
-  let game = new Bowling(testGame);
+  let game = new Bowling(testGame).finalScore();
 
   assert.equal(game, 167, 'Score not calculated correctly');
 } catch(e) {
   createErrorMessage(e);
 }
+
+console.info('All tests completed successfully');
 
