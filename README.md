@@ -1,6 +1,6 @@
 # Bowling score calculator
 
-## To calculate score run the following with a valid game
+## To calculate score run the following with a valid game (ex: X7/9-X-88/-6XXX81)
 ```
 node run <valid game>
 ```
