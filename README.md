@@ -1,3 +1,17 @@
+# Bowling score calculator
+
+## To calculate score run the following with a valid game
+```
+node run <valid game>
+```
+
+## To run tests
+```
+node test
+```
+
+---
+
 # Design and Development Challenge – Bowling Score
 
 ## Requirement
